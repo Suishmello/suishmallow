@@ -18,7 +18,7 @@
         <p style="font-size: 1.2em;">Sweeten your crypto journey with Suishmallow, the tastiest memecoin on the Sui blockchain!</p>
     </div>
 
-    <!-- Contract Address Section -->
+    <!-- Contract Address Section with Copy Button -->
     <div style="
         background-color: #FF4081;
         color: white;
@@ -29,8 +29,29 @@
         position: relative;
         left: calc(-50vw + 50%);
         ">
+        <button onclick="copyContractAddress()" style="
+            padding: 10px 20px;
+            background-color: #FFFFFF;
+            color: #FF4081;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            ">Copy Contract Address</button>
         <p style="margin: 0; font-size: 1.2em;">CA: 0x1d849afd825e0023adc89c7789a25c793e00ba0690fef7f52b7edb8642f0f604::smlw::SMLW</p>
     </div>
+
+    <!-- JavaScript to copy the contract address -->
+    <script>
+        function copyContractAddress() {
+            const contractAddress = '0x1d849afd825e0023adc89c7789a25c793e00ba0690fef7f52b7edb8642f0f604::smlw::SMLW';
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                alert('Contract address copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>
 
     <!-- Social Buttons Section -->
     <section style="
@@ -148,5 +169,6 @@
 
 </body>
 </html>
+
 
 
