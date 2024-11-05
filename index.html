@@ -38,7 +38,7 @@
             cursor: pointer;
             margin-bottom: 10px;
             ">Copy Contract Address</button>
-        <p style="margin: 0; font-size: 0.6em;">CA: 0x1d849afd825e0023adc89c7789a25c793e00ba0690fef7f52b7edb8642f0f604::smlw::SMLW</p>
+        <p style="margin: 0; font-size: 0.8em;">CA: 0x1d849afd825e0023adc89c7789a25c793e00ba0690fef7f52b7edb8642f0f604::smlw::SMLW</p>
     </div>
 
     <!-- JavaScript to copy the contract address -->
@@ -126,8 +126,41 @@
         <h2 style="color: #FF4081; margin-bottom: 10px;">Tokenomics</h2>
         <ul style="list-style-type: none; padding: 0; font-size: 1em; color: #555;">
             <li>🍬 Total Supply: 10,000,000,000 SMLW</li>
-            <li>🍬 Burn aka Roast: % to be announced</li>
+            <li>🍬 Burn aka Roast: % to be announced: SMLW hodlrs have the option of donating SMLW to the Roast Wallet that will be used to perform burns on a later specified date. Participate by clicking the Roast Wallet Address Button Below and place your SMLW on a stick to roast!</li>
         </ul><img src="suishmallowimgs/burningshmallow.png" alt="Burning Suieet" style="margin-left: 10px; max-width: 150px; height: auto; vertical-align: middle; border-radius: 10px;">
+        <!-- Roast Wallet Address Section with Copy Button -->
+    <div style="
+    background-color: #FF4081;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin: 20px 0;
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    ">
+    <button onclick="copyContractAddress()" style="
+        padding: 10px 20px;
+        background-color: #FFFFFF;
+        color: #FF4081;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        ">Copy Roast Wallet Address</button>
+</div>
+
+<!-- JavaScript to copy the roast wallet address -->
+<script>
+    function copyRoastWalletAddress() {
+        const contractAddress = '0xcfbcd6e69dffb15af1fcebc5035e7fb509d827bc0ead0dba49300eae52732ae7';
+        navigator.clipboard.writeText(RoastWalletAddress).then(() => {
+            alert('Roast Wallet Address copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+</script>
     </section>
 
     <!-- Roadmap Section -->
@@ -169,6 +202,5 @@
 
 </body>
 </html>
-
 
 
